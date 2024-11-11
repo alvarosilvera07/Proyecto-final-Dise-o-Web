@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Sitio Web</title>
+    <!-- Enlace al archivo CSS para aplicar estilos al HTML -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Seccion de encabezado -->
+    <header>
+        <h1>Proyecto Final</h1>
+    </header>
+
+    <!-- Menu de navegación principal -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio">
+            <h2>Pagina de Inicio</h2>
+            <p>Hola mundo, esta es nuestra pagina para el proyecto final de diseño web.</p>
+        </section>
+
+        <!-- Sección de formulario -->
+        <section id="formulario">
+            <h2>Formulario de Registro</h2>
+            <!-- Formulario de registro con validaciones en JavaScript -->
+            <form id="registroForm">
+                <!-- Campos de texto -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <!-- Campos de fecha -->
+                <label for="fechaInicio">Fecha de inicio:</label>
+                <input type="date" id="fechaInicio" name="fechaInicio" required>
+
+                <label for="fechaFin">Fecha de fin:</label>
+                <input type="date" id="fechaFin" name="fechaFin" required>
+
+                <!-- Seccion de calculo al estilo calculadora -->
+                <div class="calculadora">
+                    <label for="numero1">1er Numero:</label>
+                    <input type="number" id="numero1" name="numero1" required>
+
+                    <label for="numero2">2do Numero:</label>
+                    <input type="number" id="numero2" name="numero2" required>
+
+                    <label for="resultado">Resultado:</label>
+                    <input type="number" id="resultado" name="resultado" readonly>
+
+                    <!-- Botón para realizar el cálculo aritmético -->
+                    <button type="button" id="calcular">Calcular</button>
+                </div>
+
+                <!-- Grupo de checkboxes -->
+                <fieldset>
+                    <legend>Selecciona tus intereses:</legend>
+                    <input type="checkbox" name="intereses" value="Opcion1"> Opción 1
+                    <input type="checkbox" name="intereses" value="Opcion2"> Opción 2
+                    <input type="checkbox" name="intereses" value="Opcion3"> Opción 3
+                    <input type="checkbox" name="intereses" value="Opcion4"> Opción 4
+                    <!-- Botón para marcar todos los checkboxes -->
+                    <button type="button" id="marcarTodos">Marcar todos</button>
+                </fieldset>
+
+                <!-- Lista desplegable -->
+                <label for="opciones">Elige una opción:</label>
+                <select id="opciones" name="opciones" required>
+                    <option value="">Selecciona una</option>
+                    <option value="op1">Opción 1</option>
+                    <option value="op2">Opción 2</option>
+                    <option value="op3">Opción 3</option>
+                    <option value="op4">Opción 4</option>
+                </select>
+                <!-- Botones para cambiar texto a mayusculas o minusculas -->
+                <button type="button" id="mayusculas">Mayúsculas</button>
+                <button type="button" id="minusculas">Minúsculas</button>
+
+                <!-- Botón de envío del formulario -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>&copy; 2024 "Alvaro Silvera". Derechos Reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript para añadir interactividad -->
+    <script src="scripts.js"></script>
+</body>
+</html>
+

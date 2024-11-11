@@ -1,0 +1,124 @@
+/* Reseteo de márgenes y rellenos para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ajusta el modelo de caja para todos los elementos */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ECF0F1;
+}
+
+/* Estilos para el encabezado */
+header {
+    grid-area: header;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    /* Aplica la animación al título */
+    animation: fadeInUp 2s ease-in-out; 
+    animation-fill-mode: forwards; /* Asegura que el título permanezca en su lugar después de la animación */
+}
+
+/* Menú de navegación */
+nav {
+    grid-area: nav;
+    background-color: #E74C3C;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Área de contenido principal */
+main {
+    grid-area: main;
+    padding: 2rem;
+}
+
+/* Pie de página */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Estilo para el cuadro de calculadora --- */
+.calculadora {
+    border: 2px solid #333;
+    padding: 1.5rem;
+    width: 300px;
+    margin: 1rem auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculadora label,
+.calculadora input,
+.calculadora button {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.calculadora input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.calculadora button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.calculadora button:hover {
+    background-color: #2980b9;
+}
