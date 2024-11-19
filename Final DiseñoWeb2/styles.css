@@ -1,0 +1,225 @@
+/* Resetear márgenes y aplicar box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto en blanco */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #000; /* Fondo negro */
+    color: #28a745; /* Verde para el texto */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid #28a745; /* Línea verde debajo del encabezado */
+    position: sticky; /* Haz que el encabezado sea pegajoso */
+    top: 0; /* Fíjalo en la parte superior */
+    z-index: 1000; /* Asegúrate de que quede encima de otros elementos */
+}
+
+/* Título del encabezado */
+header h1 {
+    margin: 0;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+    display: flex; /* Alineación horizontal */
+    justify-content: center; /* Centrar elementos */
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Separación entre los elementos */
+}
+
+nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    padding: 8px 16px; /* Relleno interno */
+    background-color: #28a745; /* Fondo verde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto suave en hover */
+}
+
+nav ul li a:hover {
+    background-color: #218838; /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Contenedor para la sección hero */
+.hero-content {
+    display: flex; /* Disposición de lado a lado */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px; /* Espaciado entre elementos */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar en la página */
+}
+
+/* Estilo para el logo */
+.hero-logo {
+    width: 100px; /* Ancho ajustado */
+    height: auto; /* Mantener proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para el logo */
+}
+
+/* Sección hero con fondo personalizado */
+.hero {
+    background: url('crossfit.jpg') no-repeat center center/cover; /* Imagen de fondo ajustada */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Espaciado vertical */
+    border-bottom: 5px solid #28a745; /* Línea verde debajo */
+}
+
+/* Estilo general para secciones */
+section {
+    margin-bottom: 30px; /* Separación entre secciones */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto negro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Tabla de precios */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Bordes colapsados */
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+table th {
+    background-color: #28a745; /* Fondo verde */
+    color: #fff; /* Texto blanco */
+}
+
+table td {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333; /* Texto negro */
+    border-bottom: 1px solid #ddd; /* Línea separadora */
+}
+
+/* Grid para las imágenes del establecimiento */
+.grid {
+    display: grid; /* Configurar grid */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Estilo para las imágenes del establecimiento */
+.grid div img {
+    width: 100%; /* Ajustar al contenedor */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 10px;
+}
+
+/* Estilo para los encabezados de cada área del establecimiento */
+.grid div h3 {
+    text-align: center; /* Centrar texto */
+    margin: 10px 0; /* Separación superior e inferior */
+}
+
+/* Estilo para los párrafos de las áreas */
+.grid div p {
+    text-align: justify; /* Justificar texto */
+    font-size: 0.9rem; /* Reducir tamaño del texto */
+}
+
+/* Pie de página */
+footer {
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #28a745; /* Línea verde encima */
+}
+
+/* Estilo del formulario */
+form {
+    display: grid; /* Diseño en grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px; /* Espaciado entre elementos */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto negro */
+    padding: 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+form label {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+}
+
+form input, form select, form button {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde gris */
+}
+
+form input[type="text"], form input[type="email"], form input[type="date"], form input[type="number"], form select {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333;
+}
+
+/* Botones del formulario */
+form button {
+    background-color: #28a745; /* Fondo verde */
+    color: #fff; /* Texto blanco */
+    border: none;
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+form button:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+}
+
+/* Grupo de botones para mayúsculas y minúsculas */
+.btn-group {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    display: flex;
+    justify-content: space-between; /* Separar botones */
+}
+
+.btn-group button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Mitad del espacio disponible */
+}
+
+.btn-group button:hover {
+    background-color: #218838;
+}
+
+/* Botón calcular en formulario */
+#calcular-btn {
+    grid-column: 1 / span 2;
+}
