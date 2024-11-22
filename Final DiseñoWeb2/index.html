@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5730</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos -->
+    <title>5730 Training Club - Gimnasio CrossFit</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,6 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#clases">Clases</a></li>
                 <li><a href="#establecimiento">Establecimiento</a></li>
                 <li><a href="#precios">Precios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -24,7 +23,7 @@
     <main>
         <section id="inicio" class="hero">
             <div class="hero-content">
-                <img src="img/logo5730.jfif" alt="Logo 5730 Training Club" class="hero-logo">
+                <img src="img/logo5730.jfif" alt="Logo del gimnasio 5730 Training Club" class="hero-logo">
                 <div>
                     <h2>Bienvenido a CrossFit Gym</h2>
                     <p>Transforma tu cuerpo y mente con nuestros entrenamientos intensivos.</p>
@@ -32,32 +31,32 @@
             </div>
         </section>
 
-        <section id="clases">
+        <section>
             <h2>Nuestras Clases</h2>
             <p>Ofrecemos una variedad de clases que se adaptan a todos los niveles.</p>
-            <ul>
-                <li>CrossFit para principiantes</li>
-                <li>Entrenamiento avanzado</li>
-                <li>Clases de movilidad</li>
-                <li>Clases de resistencia</li>
-            </ul>
+            <ul> 
+            <li>CrossFit para principiantes</li>
+            <li>Entrenamiento avanzado</li>
+            <li>Clases de movilidad</li>
+            <li>Clases de resistencia</li>
+        </ul>
         </section>
 
         <section id="establecimiento">
             <h2>Conoce nuestro establecimiento</h2>
             <div class="grid">
                 <div>
-                    <img src="img/luces.jfif" alt="Luces e Iluminación">
+                    <img src="img/luces.jfif" alt="Luces e Iluminación LED para entrenamientos">
                     <h3>Luces e Iluminación</h3>
                     <p>Iluminación LED para entrenamiento funcional y CrossFit.</p>
                 </div>
                 <div>
-                    <img src="img/kettlebell.jfif" alt="Equipamiento">
+                    <img src="img/kettlebell.jfif" alt="Equipamiento para entrenamientos">
                     <h3>Equipamiento</h3>
                     <p>Equipamiento para los entrenamientos, tanto CrossFit como ejercicios de movilidad.</p>
                 </div>
                 <div>
-                    <img src="img/barras.jfif" alt="Barras Olímpicas">
+                    <img src="img/barras.jfif" alt="Área de barras olímpicas">
                     <h3>Barras Olímpicas</h3>
                     <p>Área especializada para levantamiento olímpico y ejercicios de fuerza.</p>
                 </div>
@@ -133,18 +132,23 @@
         </section>
 
         <section id="calculadora">
-            <h2>Calculadora</h2>
+            <h2>Calculadora de Precios Individual por Planificación</h2>
+            <p>"La planificación en CrossFit, también conocida como programación, es la organización sistemática de los entrenamientos para alcanzar objetivos específicos de fitness y rendimiento. No solo asegura que se trabajen todos los aspectos del fitness, sino que también mantiene la motivación alta y ayuda a evitar lesiones." 🏋️‍♀️💪</p>
             <form id="calculator-form">
-                <label for="calorias">Calorías quemadas:</label>
-                <input type="number" id="calorias" name="calorias" required>
-
-                <label for="objetivo">Objetivo semanal:</label>
-                <input type="number" id="objetivo" name="objetivo" required>
+                <label for="nivel-entrenamiento">Nivel de entrenamiento:</label>
+                <select id="nivel-entrenamiento" name="nivel-entrenamiento" required>
+                    <option value="inicial">Inicial</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+        
+                <label for="dias-semana">Días por semana:</label>
+                <input type="number" id="dias-semana" name="dias-semana" min="2" value="2" required>
 
                 <button type="button" id="calcular-btn">Calcular</button>
 
-                <label for="resultado">Total calorías:</label>
-                <input type="number" id="resultado" name="resultado" disabled>
+                <label for="precio-total">Precio Total:</label>
+                <input type="text" id="precio-total" name="precio-total" readonly>
             </form>
         </section>
     </main>

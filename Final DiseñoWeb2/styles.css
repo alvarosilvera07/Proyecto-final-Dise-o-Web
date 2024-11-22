@@ -92,6 +92,7 @@ section {
     padding: 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    scroll-margin-top: 80px; /* Ajusta según la altura de tu encabezado fijo */
 }
 
 /* Tabla de precios */
@@ -222,4 +223,85 @@ form button:hover {
 /* Botón calcular en formulario */
 #calcular-btn {
     grid-column: 1 / span 2;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Alineación vertical */
+    }
+    
+    .hero-content {
+        flex-direction: column; /* Disposición vertical */
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .hero {
+        padding: 50px 0; /* Espaciado vertical reducido */
+    }
+
+    nav ul {
+        flex-direction: column; /* Alineación vertical */
+        text-align: center; /* Centrar texto */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}
+
+/* Calculadora */
+#calculator-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#calculator-form label {
+    grid-column: 1 / span 2;
+}
+
+#calculator-form input,
+#calculator-form select,
+#calculator-form button {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#calculator-form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calculator-form button:hover {
+    background-color: #218838;
+}
+
+#precio-total {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
 }

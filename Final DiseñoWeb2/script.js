@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const calcularBtn = document.getElementById('calcular-btn');
     const calorias = document.getElementById('calorias');
@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectNivel = document.getElementById('nivel');
     const mayusBtn = document.getElementById('mayus-btn');
     const minusBtn = document.getElementById('minus-btn');
+    const fechaInicio = document.getElementById('fecha-inicio');
+    const fechaFin = document.getElementById('fecha-fin');
+    const marcarTodosBtn = document.getElementById('marcar-todos');
 
     // Impedir salir de campos de texto si están vacíos
     form.addEventListener('focusout', function(event) {
@@ -17,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Evitar que las fechas se crucen
-    const fechaInicio = document.getElementById('fecha-inicio');
-    const fechaFin = document.getElementById('fecha-fin');
-
     fechaInicio.addEventListener('change', function() {
         fechaFin.min = fechaInicio.value;
     });
@@ -57,9 +57,37 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         }
     });
+
     // Botón para marcar todos los checkboxes
-document.getElementById('marcar-todos').addEventListener('click', function () {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => checkbox.checked = true);
-});
+    marcarTodosBtn.addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => checkbox.checked = true);
+    });
+
+    // Calcular precio 
+    document.getElementById('calcular-btn').addEventListener('click', function () {
+        const nivel = document.getElementById('nivel-entrenamiento').value;
+        const dias = parseInt(document.getElementById('dias-semana').value);
+
+        if (dias < 2) {
+            alert("Debes seleccionar al menos 2 días por semana.");
+            return;
+        }
+
+        let precioBase = 1000; // Precio base para nivel inicial
+        let incrementoNivel = 0; // Incremento por nivel
+        switch (nivel) {
+            case 'intermedio':
+                incrementoNivel = 0.1; // 10% más caro
+                break;
+            case 'avanzado':
+                incrementoNivel = 0.2; // 20% más caro
+                break;
+        }
+
+        const incrementoDias = (dias - 2) * 0.1; // 10% por cada día adicional
+        const precioTotal = precioBase * (1 + incrementoNivel + incrementoDias);
+
+        document.getElementById('precio-total').value = `$${precioTotal.toFixed(2)}`;
+    });
 });
